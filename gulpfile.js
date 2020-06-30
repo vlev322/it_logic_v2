@@ -7,6 +7,7 @@ let preprocessor = 'sass', // Preprocessor (sass, scss, less, styl)
 		baseDirJekyll= '_site/', // Base directory path for jekyll site without «/» at the end
 		_includes    = './_includes',
 		_layouts     = './_layouts',
+		_posts     = './_posts',
     online       = true; // If «false» - Browsersync will work offline without internet connection
 
 let paths = {
@@ -117,31 +118,30 @@ function jekyllBuild(done) {
 			console.log(`exec error ${error}`);
 			return;
 		}
-		console.log("build Done!");
+		console.log("Build done");
 		done();
 	});
 }
 
 const rebuildJekyll = series(jekyllBuild, function (cb) {
 	browserSync.reload();
-	console.log('Jekyll was rebuilded');
+	console.log('Jekyll rebuilded');
 	cb();
 })
 
 const rebuildStyle = series(styles, jekyllBuild, function (cb) {
+	console.log('Style rebuilded');
 	cb();
 })
-
-
 
 function startwatch() {
 	watch(baseDir  + '/**/' + preprocessor + '/**/*', rebuildStyle);
 	watch(baseDir  + '/**/*.{' + imageswatch + '}', images);
 	watch(baseDir  + '/**/*.{' + fileswatch + '}').on('change', browserSync.reload);
-	watch([_layouts + '/*.{' + fileswatch + '}', _includes+ '/*.{' + fileswatch + '}'], rebuildJekyll);
+	watch(['./*.{' + fileswatch + '}', _layouts + '/*.{' + fileswatch + '}', _includes+ '/*.{' + fileswatch + '}' , './**/*.md'], rebuildJekyll);
+	watch('./**/*.yml', rebuildJekyll);
 	watch([baseDir + '/**/*.js', '!' + paths.scripts.dest + '/*.min.js'], scripts);
 }
-
 
 exports.browsersync = browsersync;
 exports.assets      = series(cleanimg, styles, scripts, images, jekyllBuild);

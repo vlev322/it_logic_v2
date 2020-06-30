@@ -1,9 +1,27 @@
-<nav>
+<nav class="{{ include.class }}">
   <ul>
-    <li><a href="/">main</a></li>
-    <li><a href="/blog">blog</a></li>
-    <li><a href="/countries.html">countries</a></li>
-    <li><a href="/gallery.html">gallery</a></li>
-    <li><a href="/contacts.html">contacts</a></li>
+    {% for item in site.menu %}
+    <li class="{% if page.url == {{item.url}} %} active {% endif %}">
+      <a href="{{item.url}}">{{ item.name }}</a>
+      {% if item.submenu %}
+      <ul class="submenu">
+        {% for subitem in item.submenu %}
+        <li>
+          <a href="{{ subitem.url }}">{{ subitem.name }}</a>
+          {% if subitem.submenu %}
+          <ul class="hor-submenu">
+            {% for subitem in subitem.submenu %}
+            <li>
+              <a href="{{subitem.url}}">{{subitem.name}}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
   </ul>
 </nav>

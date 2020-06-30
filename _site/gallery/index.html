@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Jekyll</title>
+  <meta name="description" content="It-logic-litslink">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dest/preview.jpg">
+	<link rel="stylesheet" href=/css/app.min.css>
+</head>
+
+
+<body>
+
+    <header>
+  <h1 class="logo">RTH</h1>
+
+  <nav class="menu-nav">
+  <ul>
+    
+    <li class="">
+      <a href="/">main</a>
+      
+    </li>
+    
+    <li class="">
+      <a href="/blog/">blog</a>
+      
+    </li>
+    
+    <li class="">
+      <a href="/countries/">countries</a>
+      
+      <ul class="submenu">
+        
+        <li>
+          <a href="">Germany</a>
+          
+        </li>
+        
+        <li>
+          <a href="">Ukraine</a>
+          
+          <ul class="hor-submenu">
+            
+            <li>
+              <a href="">Kyiv</a>
+            </li>
+            
+            <li>
+              <a href="">Dnipro</a>
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li class=" active ">
+      <a href="/gallery/">gallery</a>
+      
+    </li>
+    
+    <li class="">
+      <a href="/contacts/">contacts</a>
+      
+    </li>
+    
+  </ul>
+</nav>
+
+
+  
+
+</header>
+
+
+    <main class="gallery">
+  <div class="grid-sizer"></div>
+  
+  <div class="grid-item">
+    <img src="./images/dest/spin.gif" data-original="/images/dest/gallery/1.jpeg" alt="my awesome photo" />
+  </div>
+  
+  <div class="grid-item">
+    <img src="./images/dest/spin.gif" data-original="/images/dest/gallery/2.jpeg" alt="my awesome photo" />
+  </div>
+  
+  <div class="grid-item">
+    <img src="./images/dest/spin.gif" data-original="/images/dest/gallery/3.jpeg" alt="my awesome photo" />
+  </div>
+  
+  <div class="grid-item">
+    <img src="./images/dest/spin.gif" data-original="/images/dest/gallery/4.jpeg" alt="my awesome photo" />
+  </div>
+  
+  <div class="grid-item">
+    <img src="./images/dest/spin.gif" data-original="/images/dest/gallery/5.jpeg" alt="my awesome photo" />
+  </div>
+  
+  <div class="grid-item">
+    <img src="./images/dest/spin.gif" data-original="/images/dest/gallery/6.jpeg" alt="my awesome photo" />
+  </div>
+  
+  <div class="grid-item">
+    <img src="./images/dest/spin.gif" data-original="/images/dest/gallery/7.jpeg" alt="my awesome photo" />
+  </div>
+  
+  <div class="grid-item">
+    <img src="./images/dest/spin.gif" data-original="/images/dest/gallery/8.jpeg" alt="my awesome photo" />
+  </div>
+  
+  <div class="grid-item">
+    <img src="./images/dest/spin.gif" data-original="/images/dest/gallery/9.jpeg" alt="my awesome photo" />
+  </div>
+  
+  <div class="grid-item">
+    <img src="./images/dest/spin.gif" data-original="/images/dest/gallery/10.jpeg" alt="my awesome photo" />
+  </div>
+  
+  <div class="grid-item">
+    <img src="./images/dest/spin.gif" data-original="/images/dest/gallery/11.jpeg" alt="my awesome photo" />
+  </div>
+  
+  <div class="grid-item">
+    <img src="./images/dest/spin.gif" data-original="/images/dest/gallery/12.jpeg" alt="my awesome photo" />
+  </div>
+  
+  <div class="grid-item">
+    <img src="./images/dest/spin.gif" data-original="/images/dest/gallery/13.jpeg" alt="my awesome photo" />
+  </div>
+  
+  <div class="grid-item">
+    <img src="./images/dest/spin.gif" data-original="/images/dest/gallery/14.jpeg" alt="my awesome photo" />
+  </div>
+  
+  <div class="grid-item">
+    <img src="./images/dest/spin.gif" data-original="/images/dest/gallery/15.jpeg" alt="my awesome photo" />
+  </div>
+  
+  <div class="grid-item">
+    <img src="./images/dest/spin.gif" data-original="/images/dest/gallery/16.jpeg" alt="my awesome photo" />
+  </div>
+  
+  <div class="grid-item">
+    <img src="./images/dest/spin.gif" data-original="/images/dest/gallery/17.jpeg" alt="my awesome photo" />
+  </div>
+  
+</main>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/jquery.lazyload.js"></script>
+<script src="/js/masonry.js"></script>
+
+<script>
+  let images = $('img');
+  let grid = $('main.gallery');
+
+  grid.masonry({
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      gutter: 5,
+      percentPosition: true
+  });
+
+  images.lazyload({
+      effect: "fadeIn",
+      load: function () {
+          grid.masonry('layout');
+      }
+  });
+</script>
+
+
+    <footer>
+
+  <nav class="menu-bottom">
+  <ul>
+    
+    <li class="">
+      <a href="/">main</a>
+      
+    </li>
+    
+    <li class="">
+      <a href="/blog/">blog</a>
+      
+    </li>
+    
+    <li class="">
+      <a href="/countries/">countries</a>
+      
+      <ul class="submenu">
+        
+        <li>
+          <a href="">Germany</a>
+          
+        </li>
+        
+        <li>
+          <a href="">Ukraine</a>
+          
+          <ul class="hor-submenu">
+            
+            <li>
+              <a href="">Kyiv</a>
+            </li>
+            
+            <li>
+              <a href="">Dnipro</a>
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li class=" active ">
+      <a href="/gallery/">gallery</a>
+      
+    </li>
+    
+    <li class="">
+      <a href="/contacts/">contacts</a>
+      
+    </li>
+    
+  </ul>
+</nav>
+
+
+  <div class="social">
+    <ul>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+    </ul>
+  </div>
+  <h1 class="logo">RHT</h1>
+</footer>
+
+
+</body>
+</html>

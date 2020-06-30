@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Jekyll</title>
+  <meta name="description" content="It-logic-litslink">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dest/preview.jpg">
+	<link rel="stylesheet" href=/css/app.min.css>
+</head>
+
+
+<body>
+
+    <header>
+  <h1 class="logo">RTH</h1>
+
+  <nav class="menu-nav">
+  <ul>
+    
+    <li class="">
+      <a href="/">main</a>
+      
+    </li>
+    
+    <li class="">
+      <a href="/blog/">blog</a>
+      
+    </li>
+    
+    <li class=" active ">
+      <a href="/countries/">countries</a>
+      
+      <ul class="submenu">
+        
+        <li>
+          <a href="">Germany</a>
+          
+        </li>
+        
+        <li>
+          <a href="">Ukraine</a>
+          
+          <ul class="hor-submenu">
+            
+            <li>
+              <a href="">Kyiv</a>
+            </li>
+            
+            <li>
+              <a href="">Dnipro</a>
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li class="">
+      <a href="/gallery/">gallery</a>
+      
+    </li>
+    
+    <li class="">
+      <a href="/contacts/">contacts</a>
+      
+    </li>
+    
+  </ul>
+</nav>
+
+
+  
+
+</header>
+
+
+    <main class="countries">
+  <aside class="country-list">
+    <ul>
+      
+      <li>Australia</li>
+      
+      <li>Belgium</li>
+      
+      <li>Germany</li>
+      
+      <li>Greece</li>
+      
+    </ul>
+  </aside>
+  <section class="content">
+    
+    <div class="content-item" id="Australia">
+      <h2>Australia</h2>
+      <h3 id="head-3">head 3</h3>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p><img src="http://lorempixel.com/300/200/cats" alt="alt text" /></p>
+
+
+      <div class="recent-posts">
+
+        
+        <h3>Recent post</h3>
+
+        
+            <a href="Первая статья">Первая статья</a>
+        
+
+      </div>
+    </div>
+    
+    <div class="content-item" id="Belgium">
+      <h2>Belgium</h2>
+      <h3 id="head-3">head 3</h3>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p><img src="http://lorempixel.com/300/200/cats" alt="alt tetx" /></p>
+
+
+      <div class="recent-posts">
+
+        
+        <h3>Recent post</h3>
+
+        
+            <a href="Вторая статья лучше">Вторая статья лучше</a>
+        
+            <a href="Первая статья">Первая статья</a>
+        
+
+      </div>
+    </div>
+    
+    <div class="content-item" id="Germany">
+      <h2>Germany</h2>
+      <h3 id="head-3">head 3</h3>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p><img src="http://lorempixel.com/300/200/cats" alt="alt tetx" /></p>
+
+
+
+      <div class="recent-posts">
+
+        
+        <h3>Recent post</h3>
+
+        
+
+      </div>
+    </div>
+    
+    <div class="content-item" id="Greece">
+      <h2>Greece</h2>
+      <h3 id="head-3">head 3</h3>
+
+<p><img src="http://lorempixel.com/300/200/cats" alt="alt tetx" /></p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+      <div class="recent-posts">
+
+        
+        <h3>Recent post</h3>
+
+        
+
+      </div>
+    </div>
+    
+  </section>
+</main>
+
+<script>
+  let aside = document.getElementsByTagName("aside");
+  let anchors = aside[0].getElementsByTagName("li");
+  let items = document.getElementsByClassName("content-item");
+
+  let curr_item = items[0];
+  curr_item.style.display = "block";
+
+  Array.prototype.forEach.call(anchors, (anchor) => {
+    anchor.onclick = function (even) {
+      if (!even.hasOwnProperty(curr_item)) {
+        curr_item.style.display = "none";
+        curr_item = items[anchor.innerHTML];
+        curr_item.style.display = "block";
+      }
+    };
+  });
+</script>
+
+
+    <footer>
+
+  <nav class="menu-bottom">
+  <ul>
+    
+    <li class="">
+      <a href="/">main</a>
+      
+    </li>
+    
+    <li class="">
+      <a href="/blog/">blog</a>
+      
+    </li>
+    
+    <li class=" active ">
+      <a href="/countries/">countries</a>
+      
+      <ul class="submenu">
+        
+        <li>
+          <a href="">Germany</a>
+          
+        </li>
+        
+        <li>
+          <a href="">Ukraine</a>
+          
+          <ul class="hor-submenu">
+            
+            <li>
+              <a href="">Kyiv</a>
+            </li>
+            
+            <li>
+              <a href="">Dnipro</a>
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li class="">
+      <a href="/gallery/">gallery</a>
+      
+    </li>
+    
+    <li class="">
+      <a href="/contacts/">contacts</a>
+      
+    </li>
+    
+  </ul>
+</nav>
+
+
+  <div class="social">
+    <ul>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+    </ul>
+  </div>
+  <h1 class="logo">RHT</h1>
+</footer>
+
+
+</body>
+</html>
