@@ -1,43 +1,8 @@
 menu:
   - url: /
     name: main
-  - url: /blog/
-    name: blog
-  - url: /countries/
-    name: countries
-    submenu:
-      - url: #
-        name: Germany
-      - url: #
-        name: Ukraine
-        submenu:
-          - url: #
-            name: Kyiv
-          - url: #
-            name: Dnipro
-  - url: /gallery/
-    name: gallery
-  - url: /contacts/
-    name: contacts
 
 exclude:
   - package.json
   - gulpfile.js
   - node_modules
-
-collections:
-  posts:
-    output: true
-    permalink: /blog/:title/
-
-  country-list:
-
-social-links:
-  - name: youtube
-    href: #
-  - name: facebook
-    href: #
-  - name: instagram
-    href: #
-  - name: twitter
-    href: #

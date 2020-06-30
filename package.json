@@ -1,7 +1,7 @@
 {
-	"name": "it-logic",
+	"name": "it-logic-solution",
 	"version": "1.0.0",
-	"description": "Jekyll Template",
+	"description": "Product oriented custom software development company with R&D offices in Eastern Europe serving customers from around the globe.",
 	"main": "index.js",
 	"scripts": {
 		"dev": "gulp"
