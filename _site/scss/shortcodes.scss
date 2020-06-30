@@ -1,0 +1,206 @@
+@import 'variables';
+
+.full_size {
+  margin-right: calc((-100vw - -1024px) / 2);
+  margin-left: calc((-100vw - -1024px) / 2);
+}
+
+.widgets_blue {
+  position: relative;
+  min-height: 300px;
+  max-height: 560px;
+  display: flex;
+  margin-bottom: 4em;
+
+  .container {
+    position: relative;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+.widgets_blue_bg {
+  background-color: $blue-dark;
+  height: calc(100% - 3em);
+  margin-top: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.widgets_blue_text {
+  background-color: $blue;
+  color: $white;
+  width: 50%;
+  position: absolute;
+  bottom: -1em;
+  padding: .8em .8em 1em;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5em;
+  font-weight: 800;
+}
+
+.widgets_blue_img {
+  max-height: 560px;
+  overflow: hidden;
+}
+
+.widgets_button {
+  color: $white;
+  padding: 4em 0;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn {
+      margin-left: 2em;
+    }
+  }
+}
+
+.widgets_button_text {
+  font-size: 1.5em;
+}
+
+#contact_form {
+  .btn {
+
+    @media screen and (min-width: $mobile_view_breakpoint) {
+      float: right;
+    }
+
+    @media screen and (max-width: $mobile_view_breakpoint) {
+      padding: .6em 2em;
+    }
+  }
+}
+
+#flash_contact_form  {
+  text-align: center;
+
+  .flash_msg {
+    .flash_close {
+      position: absolute;
+      right: 10px;
+      top: 5px;
+      text-decoration: none;
+    }
+  }
+}
+
+.flash_msg {
+  background-color: white;
+  display: inline-block;
+  padding: 7px 35px;
+  line-height: 25px;
+  border-radius: 5px;
+  position: fixed;
+  top: 80px;
+  right: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,.55);
+}
+
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.flash_wrap {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  margin: auto;
+}
+
+.flash-message {
+  font-family: 'Raleway', sans-serif;
+  background-color: $green;
+  color: #fff;
+  display: inline-block;
+  min-width: 350px;
+  padding: 7px 35px;
+  line-height: 25px;
+  border-radius: 5px;
+  position: fixed;
+  top: 80px;
+  right: -9999px;
+  z-index: 9999;
+  box-shadow: 3px 5px 40px rgba(51, 51, 51, 0.3);
+
+  &.visible {
+    right: 15px;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  &.absolute {
+    position: absolute;
+    top: 34px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+  }
+
+  &.fadeOut {
+    animation-name: fadeOut;
+  }
+
+  &.rubberBand {
+    animation-name: rubberBand;
+  }
+
+  &-close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transform: scale3D(1, 1, 1);
+
+    &:hover {
+      transform: scale3D(1.5, 1.5, 1);
+    }
+  }
+}

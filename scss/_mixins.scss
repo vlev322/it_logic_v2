@@ -1,0 +1,28 @@
+// delete outline
+@mixin outline-none {
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+// service-hover
+@mixin service-hover-style {
+  .service-link{
+    transform: translateY(-70%);
+  }
+
+  .service_headline {
+    transform: translateY(30px);
+  }
+
+  .service-additional-content {
+    transform: translateY(0);
+
+    a {
+      animation: anim-elem-up 0.25s both;
+    }
+  }
+}

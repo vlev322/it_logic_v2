@@ -1,18 +1,98 @@
 ---
 layout: default
 ---
-<main class="index">
-    <div class="note">
-        <p>Hi friend! This is my personal travel blog. You may even deems it interesting. Everything for you. Just read :).</p>
+
+<div class="wrapper">
+  <div class="main">
+    <div class="index_top_wrapp">
+      <div class="index_top">
+        <div class="top_bg_color"></div>
+        <div class="shadower"></div>
+        <div class="index_top_center">
+          <div class="container">
+            <h1 class="home_page_h1">
+              <span class="home_page_h1__typer">
+                <img src="./images/dest/logos/topUPWORK.svg" class="home_page_h1__image" alt="Top rated" />
+                <span
+                  class="typer"
+                  id="main_typer"
+                  data-words="React Native, Java, Ruby on Rails, Golang, Flutter, Python, Elixir, DevOps, Unity, Grails, Vue, Ember, Swift, Node"
+                  data-colors="white"
+                  data-delay="120"
+                  data-deletedelay="2000"
+                  style="color: white;"
+                  >Node</span
+                >
+                <span
+                  class="cursor"
+                  data-cursorDisplay="|"
+                  data-owner="main_typer"
+                  style="transition: all 0.1s ease 0s; opacity: 1;"
+                ></span>
+              </span>
+              <span class="home_page_h1__text">
+                developers from Ukraine
+              </span>
+            </h1>
+            <div class="content_home">
+              <p>
+                You found a team of <strong>software engineers</strong> based in Ukraine. We help clients
+                <strong>saving costs</strong> for a technology with <strong>IT outsourcing</strong>,
+                acceptfull cycle <strong>project</strong> and <strong>team extension requests</strong>,
+                provide direct <strong>communication</strong> with <strong>English-speaking developers</strong
+                >.
+              </p>
+            </div>
+            <a class="btn white lets-talk btn_top_m btn-default" href="#go-lets-talk">Work with us</a>
+            <a class="btn white to-about find-more btn-default btn_top_m" href="#about">Find more</a>
+          </div>
+        </div>
+        <a class="btn-scroll-down to-about" href="#about">
+          <span></span>
+        </a>
+      </div>
     </div>
-    <div class="mini-gallery">
-        <ul>
-            <li><img src={{"/images/dest/mini-g1.jpg" | absolute_url }} alt="gallery foto 1"></li>
-            <li><img src="/images/dest/mini-g2.jpg" alt="gallery foto 2"></li>
-            <li><img src="/images/dest/mini-g3.jpg" alt="gallery foto 3"></li>
-            <li><img src="/images/dest/mini-g4.jpg" alt="gallery foto 4"></li>
-            <li><img src="/images/dest/mini-g5.jpg" alt="gallery foto 5"></li>
-            <li><img src="/images/dest/mini-g6.jpg" alt="gallery foto 6"></li>
-        </ul>
-    </div>
-</main>
+
+    <!-- new slider -->
+    <section class="bg_blue" id="about">
+      {% include slider-about-us.html %}
+    </section>
+
+    <!-- For your business -->
+    <section class="container index_for_business" id="services">
+      <h2>Services</h2>
+      <div class="container_small text_content text_center">
+        Our team has tailored a list of services covering full cycle web, mobile and VR/AR project
+        development. We are client-oriented, proactive technology partner who follows your guidelines but at
+        the same time suggests most efficient solutions aimed at helping your business goals.
+      </div>
+      <div class="index_services">
+        {% include services.html %}
+      </div>
+      <div class="text_center">
+        <a href="/services" class="btn fullblue">All Services</a>
+      </div>
+    </section>
+    <!-- END For your business -->
+
+    <!-- tehnologies -->
+   {% include technologies.html %}
+   <!-- END tehnologies -->
+
+   <!-- Portfolio -->
+   {% include portfolio-composition.html %}
+   <!-- END Portfolio -->
+
+   <!-- testimonials -->
+   {% include testimonails.html %}
+   <!-- END testimonials-->
+
+   <!-- Team -->
+   {% include team.html %}
+   <!-- END Team -->
+
+   <!-- Form -->
+   {% include contact-us-form.html title="Contact us" %}
+    <!-- END Form -->
+  </div>
+</div>
