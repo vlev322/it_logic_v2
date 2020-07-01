@@ -448,31 +448,31 @@ $mobile_grid_columns: 2;
 
   &:nth-child(1) {
     &:before {
-      background-image: image_url('icons/icon_settings.png');
+      background-image: image_url('../images/icons/icon_settings.png');
     }
 
     &:hover:before {
-      background-image: image_url('icons/icon_settings_hover.png');
+      background-image: image_url('../images/icons/icon_settings_hover.png');
     }
   }
 
   &:nth-child(2) {
     &:before {
-      background-image: image_url('icons/icon_grafic.png');
+      background-image: image_url('../images/icons/icon_grafic.png');
     }
 
     &:hover:before {
-      background-image: image_url('icons/icon_grafic_hover.png');
+      background-image: image_url('../images/icons/icon_grafic_hover.png');
     }
   }
 
   &:nth-child(3) {
     &:before {
-      background-image: image_url('icons/icon_heart.png');
+      background-image: image_url('../images/icons/icon_heart.png');
     }
 
     &:hover:before {
-      background-image: image_url('icons/icon_heart_hover.png');
+      background-image: image_url('../images/icons/icon_heart_hover.png');
     }
   }
 

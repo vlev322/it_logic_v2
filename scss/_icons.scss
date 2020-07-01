@@ -6,51 +6,51 @@
 }
 
 .icon_service_1 {
-  background: url('/images/dest/icons/services/service_1.png') no-repeat 50% 50%;
+  background: url('../images/dest/icons/services/service_1.png') no-repeat 50% 50%;
 }
 
 .icon_service_1w {
-  background: url('/images/dest/icons/services/service_1_w.png') no-repeat 50% 50%;
+  background: url('../images/dest/icons/services/service_1_w.png') no-repeat 50% 50%;
 }
 
 .icon_service_2 {
-  background: url('/images/dest/icons/services/service_2.png') no-repeat 50% 50%;
+  background: url('../images/dest/icons/services/service_2.png') no-repeat 50% 50%;
 }
 
 .icon_service_2w {
-  background: url('/images/dest/icons/services/service_2_w.png') no-repeat 50% 50%;
+  background: url('../images/dest/icons/services/service_2_w.png') no-repeat 50% 50%;
 }
 
 .icon_service_3 {
-  background: url('/images/dest/icons/services/service_3.png') no-repeat 50% 50%;
+  background: url('../images/dest/icons/services/service_3.png') no-repeat 50% 50%;
 }
 
 .icon_service_3w {
-  background: url('/images/dest/icons/services/service_3_w.png') no-repeat 50% 50%;
+  background: url('../images/dest/icons/services/service_3_w.png') no-repeat 50% 50%;
 }
 
 .icon_service_4 {
-  background: url('/images/dest/icons/services/service_4.png') no-repeat 50% 50%;
+  background: url('../images/dest/icons/services/service_4.png') no-repeat 50% 50%;
 }
 
 .icon_service_4w {
-  background: url('/images/dest/icons/services/service_4_w.png') no-repeat 50% 50%;
+  background: url('../images/dest/icons/services/service_4_w.png') no-repeat 50% 50%;
 }
 
 .icon_service_5 {
-  background: url('/images/dest/icons/services/service_5.png') no-repeat 50% 50%;
+  background: url('../images/dest/icons/services/service_5.png') no-repeat 50% 50%;
 }
 
 .icon_service_5w {
-  background: url('/images/dest/icons/services/service_5_w.png') no-repeat 50% 50%;
+  background: url('../images/dest/icons/services/service_5_w.png') no-repeat 50% 50%;
 }
 
 .icon_service_6 {
-  background: url('/images/dest/icons/services/service_6.png') no-repeat 50% 50%;
+  background: url('../images/dest/icons/services/service_6.png') no-repeat 50% 50%;
 }
 
 .icon_service_6w {
-  background: url('/images/dest/icons/services/service_6_w.png') no-repeat 50% 50%;
+  background: url('../images/dest/icons/services/service_6_w.png') no-repeat 50% 50%;
 }
 
 [class^='icon_'],
@@ -69,17 +69,17 @@
 }
 
 .icon_foot_home {
-  background: image_url('/images/dest/icons/icon_home.png') no-repeat 50% 50%;
+  background: url('../images/dest/icons//images/dest/icons/icon_home.png') no-repeat 50% 50%;
   background-size: auto 60%;
 }
 
 .icon_foot_phone {
-  background: image_url('/images/dest/icons/icon_phone.png') no-repeat 50% 50%;
+  background: url('../images/dest/icons//images/dest/icons/icon_phone.png') no-repeat 50% 50%;
   background-size: auto 70%;
 }
 
 .icon_foot_mail {
-  background: image_url('/images/dest/icons/icon_mail.png') no-repeat 50% 50%;
+  background: url('../images/dest/icons//images/dest/icons/icon_mail.png') no-repeat 50% 50%;
   background-size: auto 40%;
 }
 
@@ -99,19 +99,19 @@
 }
 
 .icon_search_white {
-  background-image: image_url('search-icon.png');
+  background-image: url('/images/dest/icons/search-icon.png');
 }
 
 .icon_search_dark {
-  background-image: image_url('search-icon-dark.png');
+  background-image: url('/images/dest/icons/');
 }
 
 .icon_close_dark {
-  background-image: image_url('close.svg');
+  background-image: url('/images/dest/icons/close.svg');
 }
 
 .icon_close_white {
-  background-image: image_url('close-white.svg');
+  background-image: url('/images/dest/icons/close-white.svg');
 }
 
 .icon_menu,
@@ -123,11 +123,11 @@
 }
 
 .icon_menu {
-  background-image: image_url('menu-icon.svg');
+  background-image: url('../images/dest/icons/menu-icon.svg');
 }
 
 .icon_menu_dark {
-  background-image: image_url('menu-icon-dark.svg');
+  background-image: url('../images/dest/icons/menu-icon-dark.svg');
 }
 
 .icon_close {
@@ -144,7 +144,7 @@
 }
 
 .icon_location {
-  background: image_url('icons/map.png') no-repeat 50% 50%;
+  background: url('../images/dest/icons/map.png') no-repeat 50% 50%;
   width: 1em;
   height: 1.5em;
   background-size: contain;

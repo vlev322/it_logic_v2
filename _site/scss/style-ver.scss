@@ -89,14 +89,14 @@ bt { font-size: 12px; }
 /* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
 /* Effects also are controled by hover.zoom.js */
 .zoom {
-	background: transparent url("themes/camaleon_first/assets/images/loader.gif") no-repeat center;
+	background: transparent url("../images/dest/icons/loader.gif") no-repeat center;
 	display: block;
 	overflow: hidden;
 	position: relative;
 }
 
 .zoomOverlay {
-	background-image: url("themes/camaleon_first/assets/images/zoom.png");
+	background-image: url("../images/dest/icons/zoom.png");
 	background-position: center;
 	background-repeat: no-repeat;
 	bottom: 0;
