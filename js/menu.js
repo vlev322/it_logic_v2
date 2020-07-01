@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log('From menu')
   if($('body').is('.home-page')) {
 
     $(document).on("scroll", onScroll);

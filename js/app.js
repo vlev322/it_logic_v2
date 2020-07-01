@@ -1,7 +1,5 @@
 
 $(document).ready(function() {
-console.log('main js');
-
   if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
     $('.index_top').height($(window).height() - 57);
   }
@@ -35,8 +33,6 @@ console.log('main js');
       var headScroll = (-wScroll / 2);
       var faderScroll = (wScroll / 400);
       var fadeToColor = Math.min(faderScroll, .9);
-			console.log('We are scrolling');
-
       shadower.css({
         opacity: fadeToColor
       });
@@ -181,5 +177,5 @@ function closeToLupa() {
             }, 1000)
         }
 		};
-		
+
 })(jQuery);

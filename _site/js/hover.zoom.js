@@ -1,5 +1,4 @@
 (function($){
-    console.log('From hover')
     $.fn.extend({
 
         hoverZoom: function(settings) {
