@@ -1,5 +1,5 @@
 (function ($, window) {
-
+    console.log('From serviceShowContent')
     $.fn.serviceShowContent = function (selector, options) {
         options = $.extend(true, {
             additionalContentSelector: '.service-additional-content'
