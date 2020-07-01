@@ -1,5 +1,6 @@
 (function (window, Swiper) {
     window.onload = function () {
+        console.log('From _Slider');
 
         var swiper = new Swiper('.index_slider', {
             nextButton: '.swiper-button-next',

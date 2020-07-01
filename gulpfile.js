@@ -17,15 +17,14 @@ let paths = {
 			'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
 			'node_modules/jquery-ujs/src/rails.js',
 			baseDir + '/js/serviceShowContent.js',
-			baseDir + '/js/sliders.js',
 			baseDir + '/js/contact_us.js',
 			baseDir + '/js/hover.zoom.js',
-			baseDir + '/js/main.js',
 			baseDir + '/js/menu.js',
 			baseDir + '/js/modernizr.custom.js',
 			baseDir + '/js/portfolio.js',
 			baseDir + '/js/spinner.js',
 			baseDir + '/js/typer.js',
+			baseDir + '/js/sliders.js',
 			baseDir + '/js/app.js' // app.js. Always at the end
 		],
 		dest: baseDir + '/js',
@@ -162,4 +161,5 @@ exports.images      = images;
 exports.cleanimg    = cleanimg;
 exports.deploy      = deploy;
 exports.jekyllBuild = jekyllBuild;
+exports.rebuildJekyll = rebuildJekyll;
 exports.default     = parallel(images, styles, scripts, jekyllBuild, browsersync, startwatch);
