@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="inner_page_top inn_bg">
+    <div class="container_big">
+      <h1 class="headline_with_bg">
+        <%= @post.the_title %>
+      </h1>
+    </div>
+  </div>
+
+  <div class="container content">
+    <%= render partial: 'partials/breadcrumb', locals: {breadcrumb: @post.the_breadcrumb} %>
+    <%= raw
+    @post.the_content %>
+  </div>
+
+  <div class="inner_page_call fullwidth">
+    <div class="container_big">
+      <h4>We can help you make your next project incredible</h4>
+      <div class="btn white big">start a project with us</div>
+    </div>
+  </div>

@@ -188,11 +188,11 @@
   }
 
   &.inn_bg {
-    background-image: image_url('bg_header_inner_page.jpg');
+    background-image: url('../images/dest/backgrounds/bg_header_inner_page.jpg');
   }
 
   &.services_bg {
-    background-image: image_url('services_bg.jpg');
+    background-image: image_url('../images/dest/backgrounds/services_bg.jpg');
   }
 }
 

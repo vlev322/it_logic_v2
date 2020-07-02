@@ -2,7 +2,10 @@ menu:
   - url: /
     name: main
 
+
 exclude:
   - package.json
   - gulpfile.js
   - node_modules
+
+collections:
