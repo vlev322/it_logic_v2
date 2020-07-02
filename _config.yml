@@ -2,10 +2,33 @@ menu:
   - url: /
     name: main
 
-
 exclude:
   - package.json
   - gulpfile.js
   - node_modules
 
 collections:
+  services:
+    layout: services
+    output: true
+
+page_gen-dirs: true # uncomment, if you prefer to generate named folders
+
+page_gen:
+  - index_files: false
+    data: "services_page_content"
+    template: "service"
+    name: "title"
+    dir: "services"
+    permalink: /:path/
+
+  # - data: "books"
+  #   template: "book"
+  #   name: "title"
+  #   dir: "books-i-have-read"
+  #   filter: read # read is a boolean value in the YML file
+
+  # read is a boolean value in the YML file, but I need to test for
+  # falsity (read: false). The field `filter` is no good and I need to
+  # use filter_conditions
+permalink: /:name/

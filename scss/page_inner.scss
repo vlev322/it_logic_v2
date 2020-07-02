@@ -192,7 +192,7 @@
   }
 
   &.services_bg {
-    background-image: image_url('../images/dest/backgrounds/services_bg.jpg');
+    background-image: url('../images/dest/backgrounds/services_bg.jpg');
   }
 }
 
@@ -232,7 +232,7 @@ h1.headline_with_bg {
 .inner_page_call {
   background-position: top center;
   background-repeat: no-repeat;
-  background-image: image_url('bg_call_to_action.jpg');
+  background-image: url('../images/dest/backgrounds/bg_call_to_action.jpg');
   background-size: cover;
   padding: 4em 0;
   display: flex;
@@ -240,7 +240,7 @@ h1.headline_with_bg {
   align-items: center;
 
   &.call_bg_2 {
-    background-image: image_url('bg_call_to_action_2.jpg');
+    background-image: url('../images/dest/backgrounds/bg_call_to_action_2.jpg');
 
     >div {
       .call_with_icon:nth-child(2) {

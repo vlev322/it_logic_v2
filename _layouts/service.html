@@ -3,22 +3,66 @@ layout: default
 ---
 
 <div class="inner_page_top inn_bg">
-    <div class="container_big">
-      <h1 class="headline_with_bg">
-        <%= @post.the_title %>
-      </h1>
+  <div class="container_big">
+    <h1 class="headline_with_bg">
+      {{page.head_title}}
+    </h1>
+  </div>
+</div>
+
+<div class="container content">
+  <!-- <%= render partial: 'partials/breadcrumb', locals: {breadcrumb: @post.the_breadcrumb} %> -->
+  <h2>
+    <strong>
+      {{page.content_title}}
+    </strong>
+  </h2>
+
+  {% for text in page.text_content %}
+    {% if text.p %}
+      <p>{{ text.p }}</p>
+
+    {% elsif text.h3 %}
+      <h3>{{ text.h3 }}</h3>
+
+    {% elsif text.ul %}
+      {% for li in text.ul %}
+        {% if forloop.first == true %}
+          {{ li }}
+        {% elsif forloop.last == true %}
+          {{ li }}
+        {% else %}
+          <li>
+            {{ li }}
+          </li>
+        {% endif %}
+      {% endfor %}
+
+    {% elsif text.ul_single %}
+      <ul>
+        <li>
+          {{ text.ul_single }}
+        </li>
+      </ul>
+    {% endif %}
+  {% endfor %}
+
+  <div class="blue_block fullwidth">
+    <div class="container">
+      <h4>
+        {{ page.blue_block.h }}
+      </h4>
+      <p>
+        {{ page.blue_block.p }}
+      </p>
     </div>
   </div>
 
-  <div class="container content">
-    <%= render partial: 'partials/breadcrumb', locals: {breadcrumb: @post.the_breadcrumb} %>
-    <%= raw
-    @post.the_content %>
+<div class="inner_page_call fullwidth">
+  <div class="container_big">
+    <h4>We can help you make your next project incredible</h4>
+    <div class="btn white big">start a project with us</div>
   </div>
+</div>
 
-  <div class="inner_page_call fullwidth">
-    <div class="container_big">
-      <h4>We can help you make your next project incredible</h4>
-      <div class="btn white big">start a project with us</div>
-    </div>
-  </div>
+</div>
