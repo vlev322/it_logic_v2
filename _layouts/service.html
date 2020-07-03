@@ -25,12 +25,24 @@ layout: default
     {% elsif text.h3 %}
       <h3>{{ text.h3 }}</h3>
 
+    {% elsif text.strong %}
+      <p>
+        <strong>
+          {{ text.strong }}
+        </strong>
+      </p>
+
     {% elsif text.ul %}
       {% for li in text.ul %}
         {% if forloop.first == true %}
           {{ li }}
         {% elsif forloop.last == true %}
           {{ li }}
+        {% elsif li.accent %}
+          <li>
+            <strong> {{ li.strong }} </strong>
+            {{ li.regular }}
+          </li>
         {% else %}
           <li>
             {{ li }}
@@ -60,8 +72,8 @@ layout: default
 
 <div class="inner_page_call fullwidth">
   <div class="container_big">
-    <h4>We can help you make your next project incredible</h4>
-    <div class="btn white big">start a project with us</div>
+    <h4>Making your next project incredible</h4>
+    <a class="btn white big lets-talk" style="text-transform: none;" href="/#go-lets-talk">Start a Project With Us</a>
   </div>
 </div>
 

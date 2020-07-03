@@ -7,7 +7,7 @@ let preprocessor = 'scss', // Preprocessor (sass, scss, less, styl)
 		baseDirJekyll= '_site/', // Base directory path for jekyll site without «/» at the end
 		_includes    = './_includes/*.{' + fileswatch + '}',
 		_layouts     = './_layouts/*.{' + fileswatch + '}',
-		_assetsFiles = ['./*.{' + fileswatch + '}', _layouts, _includes, './**/*.yml' ]
+		_assetsFiles = ['./*.{' + fileswatch + '}', _layouts, _includes, './**/**/*.yml' ]
     online       = true; // If «false» - Browsersync will work offline without internet connection
 
 let paths = {
