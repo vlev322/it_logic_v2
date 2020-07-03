@@ -7,16 +7,16 @@
       href: services/custom-web-development
     - techlink:
       name: CMS Web Projects
-      href: /cms-web-projects
+      href: services/cms-web-projects
     - techlink:
       name: API Integration
-      href: /api-integration
+      href: services/api-integration
     - techlink:
       name: eCommerce solutions
-      href: /ecommerce-solutions
+      href: services/ecommerce-solutions
     - techlink:
       name: UX/UI Design
-      href: /ux-ui-design
+      href: services/ux-ui-design
 
 - service-block:
   title: Mobile Applications
@@ -24,13 +24,13 @@
   links:
     - techlink:
       name: iOS App Development
-      href: /ios-app-development
+      href: services/ios-app-development
     - techlink:
       name: Android App Development
-      href: /android-app-development
+      href: services/android-app-development
     - techlink:
       name: Cross-Platform Mobile App
-      href: /cross-platform-applications
+      href: services/cross-platform-applications
 
 - service-block:
   title: VR, AR and MR Apps
@@ -38,19 +38,19 @@
   links:
     - techlink:
       name: HTC VIVE
-      href: /htc-vive
+      href: services/htc-vive
     - techlink:
       name: Microsoft Hololens
-      href: /microsoft-hololens
+      href: services/microsoft-hololens
     - techlink:
       name: Oculus
-      href: /oculus
+      href: services/oculus
     - techlink:
       name: Samsung Gear VR
-      href: /samsung-gear-vr
+      href: services/samsung-gear-vr
     - techlink:
       name: Google Cardboard
-      href: /google-cardboard
+      href: services/google-cardboard
 
 - service-block:
   title: Software Testing
@@ -58,13 +58,13 @@
   links:
     - techlink:
       name: Functional testing
-      href: /functional-testing
+      href: services/functional-testing
     - techlink:
       name: Cross platform testing
-      href: /cross-platform-testing
+      href: services/cross-platform-testing
     - techlink:
       name: Performance analysis
-      href: /performance-testing
+      href: services/performance-testing
 
 - service-block:
   title: Database Design
@@ -72,16 +72,16 @@
   links:
     - techlink:
       name: Mongo DB
-      href: /mongodb
+      href: services/mongodb
     - techlink:
       name: PostgreSQL
-      href: /postgresql
+      href: services/postgresql
     - techlink:
       name: MySQ
-      href: /mysql
+      href: services/mysql
     - techlink:
       name: Cassandra
-      href: /cassandra
+      href: services/cassandra
 
 - service-block:
   title: Remote Developers
@@ -90,11 +90,11 @@
   links:
     - techlink:
       name: Time and Material
-      href: /time-and-material
+      href: services/time-and-material
     - techlink:
       name: Dedicated Team
-      href: /dedicated-team
+      href: services/dedicated-team
     - techlink:
       name: White Label Team Extension
-      href: /white-label-team-extension
+      href: services/white-label-team-extension
 

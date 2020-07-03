@@ -16,11 +16,16 @@ page_gen-dirs: true # uncomment, if you prefer to generate named folders
 
 page_gen:
   - index_files: false
-    data: "services_page_content"
+    data: "services-pages.services_page_content"
     template: "service"
     name: "title"
     dir: "services"
-    permalink: /:path/
+
+  - index_files: false
+    data: services-pages.mobile_aplication
+    template: "service"
+    name: "title"
+    dir: "services"
 
   # - data: "books"
   #   template: "book"

@@ -5,9 +5,9 @@ let preprocessor = 'scss', // Preprocessor (sass, scss, less, styl)
     imageswatch  = 'jpg,jpeg,png,webp,svg', // List of images extensions for watching & compression (comma separated)
     baseDir      = '.', // Base directory path without «/» at the end
 		baseDirJekyll= '_site/', // Base directory path for jekyll site without «/» at the end
-		_includes    = './_includes',
-		_layouts     = './_layouts',
-		_posts     = './_posts',
+		_includes    = './_includes/*.{' + fileswatch + '}',
+		_layouts     = './_layouts/*.{' + fileswatch + '}',
+		_assetsFiles = ['./*.{' + fileswatch + '}', _layouts, _includes, './**/*.yml' ]
     online       = true; // If «false» - Browsersync will work offline without internet connection
 
 let paths = {
@@ -74,7 +74,7 @@ function browsersync() {
 	browserSync.init({
 		server: { baseDir: baseDirJekyll + '/' },
 		notify: false,
-		online: online,
+		// online: online,
 		// tunnel: true,
 	})
 }
@@ -148,8 +148,7 @@ function startwatch() {
 	watch(baseDir  + '/**/' + preprocessor + '/**/*', rebuildStyle);
 	watch(baseDir  + '/**/*.{' + imageswatch + '}', images);
 	watch(baseDir  + '/**/*.{' + fileswatch + '}').on('change', browserSync.reload);
-	watch(['./*.{' + fileswatch + '}', _layouts + '/*.{' + fileswatch + '}', _includes+ '/*.{' + fileswatch + '}' , './**/*.md'], rebuildJekyll);
-	watch('./**/*.yml', rebuildJekyll);
+	watch(_assetsFiles, rebuildJekyll);
 	watch([baseDir + '/**/*.js', '!' + paths.scripts.dest + '/*.min.js'], scripts);
 }
 
