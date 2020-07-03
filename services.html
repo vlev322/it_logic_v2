@@ -1,0 +1,36 @@
+---
+layout: default
+permaink: /:name/
+---
+
+<div class="inner_page_top services_bg">
+  <div class="container_big">
+    <div class="text_center">
+      <h1 class="white uppercase">Services</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container content df fdc">
+  <!-- <%= render partial: 'partials/breadcrumb', locals: {breadcrumb: @post_type.the_breadcrumb} %> -->
+
+  <!-- future widget -->
+  <div class="inner_page_call call_bg_2 fullwidth order_1">
+    <div class="container_big">
+      <div class="call_with_icon">
+        <img src="/images/dest/icons/briefcase_icon.png" alt="">
+        <a href="/app/assets/stylesheets#portfolio" class="btn blue uppercase">cases</a>
+      </div>
+      <div class="call_with_icon">
+        <img src="/images/dest/icons/communication_icon.png" alt="">
+        <a href="/#go-lets-talk" class="btn fullblue uppercase">work with us</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="inner_services fullwidth">
+    <div class="container">
+      {% include services.html %}
+    </div>
+  </div>
+</div>
