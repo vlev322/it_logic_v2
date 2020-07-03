@@ -1,0 +1,100 @@
+<script>
+  function recaptchaCallback() {
+    var button = document.querySelectorAll('.toggle_contact_form button[type="submit"]');
+
+    if (!button.length) {
+      return;
+    }
+
+    button[0].disabled = false;
+  }
+</script>
+
+<div id="go-lets-talk"></div>
+<section class="index_form">
+  <div id="flash_contact_form" class="flash_wrap"></div>
+  <div class="container_small">
+    <div class="text_center">
+      <h2>{{ include.title }}</h2>
+      <div class="form_wrap">
+        <div class="toggle_contact_form">
+          <div class="index_form__time">24/7</div>
+          <form
+            class="idea_form"
+            id="contact_form"
+            action="/contact_us"
+            accept-charset="UTF-8"
+            data-remote="true"
+            method="post"
+          >
+            <input name="utf8" type="hidden" value="✓" />
+            <div class="index_form_left">
+              <div class="input_field">
+                <input type="text" name="name" id="name" placeholder="Name" required="required" />
+              </div>
+              <div class="input_field">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$"
+                  placeholder="Email"
+                  required="required"
+                />
+              </div>
+              <div class="input_field">
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  pattern="^(?=.*[0-9])[- +()0-9]+$"
+                  placeholder="Phone"
+                  required="required"
+                />
+              </div>
+            </div>
+            <div class="index_form_right">
+              <div class="input_field">
+                <textarea
+                  name="details"
+                  id="details"
+                  placeholder="Project details..."
+                  required="required"
+                ></textarea>
+              </div>
+            </div>
+            <div class="form_btn_wrapp">
+              <button type="submit" class="btn fullblue btn-default">SUBMIT</button>
+            </div>
+            <a
+              href="https://www.upwork.com/agencies/~019ebb4d79b498eccf"
+              target="_blank"
+              class="index_form__upwork"
+            >
+              <span><img src="../images/dest/logos/upwork-logo.png" alt="" /></span>
+              <span> Find us on Upwork</span>
+            </a>
+          </form>
+        </div>
+
+        <div class="contact_spinner">
+          <div class="loader">Loading...</div>
+        </div>
+
+        <div class="contact_success bg_blue">
+          <h3>Your message has been sent.</h3>
+          <p>We will contact you within 2 hours 8AM-9PM CET Mon-Fri.</p>
+          <button
+            name="button"
+            type="submit"
+            class="contact_res_btn btn fullblue btn-default"
+            id="contact_res_btn"
+            onclick="contactUs.toggleContactForm()"
+          >
+            GOT IT
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

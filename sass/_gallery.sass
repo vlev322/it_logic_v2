@@ -1,0 +1,25 @@
+main.gallery
+  width: 98%
+  margin: 15px auto
+
+  // @media screen and ( min-width: 600px )
+  //   column-count: 2
+  //   column-gap: 5px
+
+  // @media screen and ( min-width: 800px )
+  //   column-count: 3
+  .grid-sizer, .grid-item
+    width: 32%
+
+    @media screen and ( max-width: 800px )
+      width: 49.5%
+
+    @media screen and ( max-width: 400px )
+      width: 90%
+
+  .grid-item
+    float: left
+    margin-bottom: 5px
+
+  img
+    width: 100%

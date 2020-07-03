@@ -1,0 +1,34 @@
+<div class="services">
+
+  {% for service-block in site.data.services %}
+
+  {% capture icon %}
+    icon_service_{{ forloop.index }}
+  {% endcapture %}
+
+  <div class="service-block">
+    <div class="service-link">
+      <div class="service-link-icon">
+        <i class={{icon}}></i>
+        <div class="service_text">
+          <div class="service_headline">
+            {{ service-block.title }}
+          </div>
+          <div class="service_description">
+            {{ service-block.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="service-additional-content">
+      {% for tech in service-block.links %}
+        <a href={{ tech.href }}>{{ tech.name }}</a>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% endfor %}
+
+  </div>
+
+</div>

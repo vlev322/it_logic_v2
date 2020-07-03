@@ -1,0 +1,100 @@
+- service-block:
+  title: Web Development
+  description: We offer custom web application development services to create a unique user experience and solve the most complex business issues.
+  links:
+    - techlink:
+      name: Custom Web Development
+      href: services/custom-web-development
+    - techlink:
+      name: CMS Web Projects
+      href: services/cms-web-projects
+    - techlink:
+      name: API Integration
+      href: services/api-integration
+    - techlink:
+      name: eCommerce solutions
+      href: services/ecommerce-solutions
+    - techlink:
+      name: UX/UI Design
+      href: services/ux-ui-design
+
+- service-block:
+  title: Mobile Applications
+  description: Our professional mobile app developers offer custom Android, iOS, and cross platform app development services for any taste and need.
+  links:
+    - techlink:
+      name: iOS App Development
+      href: services/ios-app-development
+    - techlink:
+      name: Android App Development
+      href: services/android-app-development
+    - techlink:
+      name: Cross-Platform Mobile App
+      href: services/cross-platform-applications
+
+- service-block:
+  title: VR, AR and MR Apps
+  description: Stay on trend with the latest VR (virtual reality) app and software development solutions for any business requirements and environments.Amaze your customers and keep your business ahead of the competition with the unique AR technology.
+  links:
+    - techlink:
+      name: HTC VIVE
+      href: services/htc-vive
+    - techlink:
+      name: Microsoft Hololens
+      href: services/microsoft-hololens
+    - techlink:
+      name: Oculus
+      href: services/oculus
+    - techlink:
+      name: Samsung Gear VR
+      href: services/samsung-gear-vr
+    - techlink:
+      name: Google Cardboard
+      href: services/google-cardboard
+
+- service-block:
+  title: Software Testing
+  description: Combining the best resources with only proven methodologies, our company provides automation, functional, performance, and mobile app testing services worldwide.
+  links:
+    - techlink:
+      name: Functional testing
+      href: services/functional-testing
+    - techlink:
+      name: Cross platform testing
+      href: services/cross-platform-testing
+    - techlink:
+      name: Performance analysis
+      href: services/performance-testing
+
+- service-block:
+  title: Database Design
+  description: Combining the best resources with only proven methodologies, our company provides automation, functional, performance, and mobile app testing services worldwide.
+  links:
+    - techlink:
+      name: Mongo DB
+      href: services/mongodb
+    - techlink:
+      name: PostgreSQL
+      href: services/postgresql
+    - techlink:
+      name: MySQ
+      href: services/mysql
+    - techlink:
+      name: Cassandra
+      href: services/cassandra
+
+- service-block:
+  title: Remote Developers
+  description: We provide a full range of professional outsourcing and remote software development services for
+            startups and entrepreneurs across the globe.
+  links:
+    - techlink:
+      name: Time and Material
+      href: services/time-and-material
+    - techlink:
+      name: Dedicated Team
+      href: services/dedicated-team
+    - techlink:
+      name: White Label Team Extension
+      href: services/white-label-team-extension
+

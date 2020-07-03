@@ -1,0 +1,151 @@
+.icon_arrowbig {
+  cursor: pointer;
+  width: 2.3em;
+  height: 2.7em;
+  background-image: url('arrow_big.png');
+}
+
+.icon_service_1 {
+  background: url('../images/dest/icons/services/service_1.png') no-repeat 50% 50%;
+}
+
+.icon_service_1w {
+  background: url('../images/dest/icons/services/service_1_w.png') no-repeat 50% 50%;
+}
+
+.icon_service_2 {
+  background: url('../images/dest/icons/services/service_2.png') no-repeat 50% 50%;
+}
+
+.icon_service_2w {
+  background: url('../images/dest/icons/services/service_2_w.png') no-repeat 50% 50%;
+}
+
+.icon_service_3 {
+  background: url('../images/dest/icons/services/service_3.png') no-repeat 50% 50%;
+}
+
+.icon_service_3w {
+  background: url('../images/dest/icons/services/service_3_w.png') no-repeat 50% 50%;
+}
+
+.icon_service_4 {
+  background: url('../images/dest/icons/services/service_4.png') no-repeat 50% 50%;
+}
+
+.icon_service_4w {
+  background: url('../images/dest/icons/services/service_4_w.png') no-repeat 50% 50%;
+}
+
+.icon_service_5 {
+  background: url('../images/dest/icons/services/service_5.png') no-repeat 50% 50%;
+}
+
+.icon_service_5w {
+  background: url('../images/dest/icons/services/service_5_w.png') no-repeat 50% 50%;
+}
+
+.icon_service_6 {
+  background: url('../images/dest/icons/services/service_6.png') no-repeat 50% 50%;
+}
+
+.icon_service_6w {
+  background: url('../images/dest/icons/services/service_6_w.png') no-repeat 50% 50%;
+}
+
+[class^='icon_'],
+[class*=' icon_'] {
+  display: inline-block;
+  vertical-align: middle;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+[class^='icon_service'] {
+  width: 6em;
+  height: 5em;
+  background-size: contain;
+}
+
+.icon_foot_home {
+  background: url('../images/dest/icons/icon_home.png') no-repeat 50% 50%;
+  background-size: auto 60%;
+}
+
+.icon_foot_phone {
+  background: url('../images/dest/icons/icon_phone.png') no-repeat 50% 50%;
+  background-size: auto 70%;
+}
+
+.icon_foot_mail {
+  background: url('../images/dest/icons/icon_mail.png') no-repeat 50% 50%;
+  background-size: auto 40%;
+}
+
+[class^='icon_foot'] {
+  width: 28px;
+  height: 28px;
+}
+
+.icon_search_dark,
+.icon_search_white,
+.icon_close_dark,
+.icon_close_white {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-size: 50% 50%;
+}
+
+.icon_search_white {
+  background-image: url('/images/dest/icons/search-icon.png');
+}
+
+.icon_search_dark {
+  background-image: url('/images/dest/icons/');
+}
+
+.icon_close_dark {
+  background-image: url('/images/dest/icons/close.svg');
+}
+
+.icon_close_white {
+  background-image: url('/images/dest/icons/close-white.svg');
+}
+
+.icon_menu,
+.icon_menu_dark {
+  cursor: pointer;
+  width: 1.8em;
+  height: 1.4em;
+  background-size: 24px auto;
+}
+
+.icon_menu {
+  background-image: url('../images/dest/icons/menu-icon.svg');
+}
+
+.icon_menu_dark {
+  background-image: url('../images/dest/icons/menu-icon-dark.svg');
+}
+
+.icon_close {
+  width: 1.5em;
+  height: 1.5em;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1;
+  font-size: 1.2em;
+  font-weight: 600;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon_location {
+  background: url('../images/dest/icons/map.png') no-repeat 50% 50%;
+  width: 1em;
+  height: 1.5em;
+  background-size: contain;
+}

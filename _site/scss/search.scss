@@ -1,0 +1,33 @@
+@import 'variables';
+
+.search-form {
+  position: absolute;
+  top: $header-height;
+  left: 0;
+  right: 0;
+  background-color: $blue;
+  display: none;
+  padding: 1em 0;
+
+  .search-submit {
+    margin: 0 .5em 0 2em;
+    background-color: transparent;
+    background-image: image_url('search-icon.png');
+    border: 0;
+    padding: 0;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.search-field {
+  width: 100%;
+}
+
+.search_container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
