@@ -16,6 +16,7 @@ let paths = {
 		src: [
 			'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
 			'node_modules/jquery-ujs/src/rails.js',
+			baseDir + '/js/swiper-lib.js',
 			baseDir + '/js/serviceShowContent.js',
 			baseDir + '/js/contact_us.js',
 			baseDir + '/js/hover.zoom.js',
@@ -69,12 +70,14 @@ const newer        = require('gulp-newer');
 const rsync        = require('gulp-rsync');
 const del          = require('del');
 const exec         = require("child_process").exec;
+const spawn        = require("child_process").spawn;
+const gutil        = require('gulp-util');
 
 function browsersync() {
 	browserSync.init({
 		server: { baseDir: baseDirJekyll + '/' },
 		notify: false,
-		// online: online,
+		online: online,
 		// tunnel: true,
 	})
 }
@@ -123,14 +126,28 @@ function deploy() {
 	}))
 }
 function jekyllBuild(done) {
-	exec("jekyll build", function (error, stdout, stderr) {
-		if (error) {
-			console.log(`exec error ${error}`);
-			return;
-		}
-		console.log("Build done");
-		done();
-	});
+	// exec("jekyll build", function (error, stdout, stderr) {
+	// 	if (error) {
+	// 		console.log(`exec error ${error}`);
+	// 		return;
+	// 	}
+	// 	console.log("Build done");
+	// 	done();
+	// });
+  const jekyll = spawn('jekyll', ['serve',
+    '--watch',
+    '--incremental',
+    '--drafts'
+  ]);
+
+  const jekyllLogger = (buffer) => {
+    buffer.toString()
+      .split(/\n/)
+      .forEach((message) => gutil.log('Jekyll: ' + message));
+  };
+
+  jekyll.stdout.on('data', jekyllLogger);
+  jekyll.stderr.on('data', jekyllLogger);
 }
 
 const rebuildJekyll = series(jekyllBuild, function (cb) {
@@ -139,16 +156,17 @@ const rebuildJekyll = series(jekyllBuild, function (cb) {
 	cb();
 })
 
-const rebuildStyle = series(styles, jekyllBuild, function (cb) {
-	console.log('Style rebuilded');
-	cb();
-})
+// const rebuildStyle = series(styles, jekyllBuild, function (cb) {
+// 	console.log('Style rebuilded');
+// 	cb();
+// })
+
 
 function startwatch() {
-	watch(baseDir  + '/**/' + preprocessor + '/**/*', rebuildStyle);
+	watch(baseDir  + '/**/' + preprocessor + '/**/*', styles);
 	watch(baseDir  + '/**/*.{' + imageswatch + '}', images);
 	watch(baseDir  + '/**/*.{' + fileswatch + '}').on('change', browserSync.reload);
-	watch(_assetsFiles, rebuildJekyll);
+	// watch(_assetsFiles, rebuildJekyll);
 	watch([baseDir + '/**/*.js', '!' + paths.scripts.dest + '/*.min.js'], scripts);
 }
 
@@ -161,4 +179,4 @@ exports.cleanimg    = cleanimg;
 exports.deploy      = deploy;
 exports.jekyllBuild = jekyllBuild;
 exports.rebuildJekyll = rebuildJekyll;
-exports.default     = parallel(styles, scripts, jekyllBuild, browsersync, startwatch);
+exports.default     = parallel(styles, scripts, browsersync, startwatch);

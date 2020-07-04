@@ -12,8 +12,11 @@ collections:
     layout: services
     output: true
 
+permalink: /:name/
+
 page_gen-dirs: true # uncomment, if you prefer to generate named folders
 
+# Services parts
 page_gen:
   - index_files: false
     data: "services-pages.services_page_content"
@@ -51,8 +54,27 @@ page_gen:
     name: "title"
     dir: "services"
 
+  # technologies parts
 
+  - index_files: false
+    data: technologies-pages.mobile
+    template: "service"
+    name: "title"
+    dir: "technologies"
 
+  # - index_files: false
+  #   data: technologies-pages.back_end
+  #   template: "service"
+  #   name: "title"
+  #   dir: "technologies"
+
+  # - index_files: false
+  #   data: technologies-pages.front_end
+  #   template: "service"
+  #   name: "title"
+  #   dir: "technologies"
+
+  # Example to use filter for create page
   # - data: "books"
   #   template: "book"
   #   name: "title"
@@ -62,4 +84,3 @@ page_gen:
   # read is a boolean value in the YML file, but I need to test for
   # falsity (read: false). The field `filter` is no good and I need to
   # use filter_conditions
-permalink: /:name/

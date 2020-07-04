@@ -1,11 +1,23 @@
 ---
 layout: default
 ---
+  {% assign url = page.url | split: "/" %}
+  {% assign stack = url[1] %}
+  {% assign technology = url | last %}
+
+  {% capture src %}
+    /images/dest/technologies/{{ technology }}.png
+  {% endcapture %}
 
 <div class="inner_page_top inn_bg">
   <div class="container_big">
     <h1 class="headline_with_bg">
-      {{page.head_title}}
+
+      {% if url[1] == 'technologies' %}
+        <img src={{ src }} alt="">
+      {% else %}
+        {{page.head_title}}
+      {% endif %}
     </h1>
   </div>
 </div>
@@ -15,6 +27,7 @@ layout: default
   <h2>
     <strong>
       {{page.content_title}}
+
     </strong>
   </h2>
 
