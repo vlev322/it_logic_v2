@@ -15,7 +15,9 @@
 .inner-page .main > div:first-child {
     padding-top: 4em;
 }
-
+.main{
+  flex: 1 0 auto;
+}
 .service_page {
   display: flex;
   justify-content: center;

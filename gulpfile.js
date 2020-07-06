@@ -21,7 +21,6 @@ let paths = {
 			baseDir + '/js/serviceShowContent.js',
 			baseDir + '/js/contact_us.js',
 			baseDir + '/js/hover.zoom.js',
-			baseDir + '/js/menu.js',
 			baseDir + '/js/modernizr.custom.js',
 			baseDir + '/js/portfolio.js',
 			baseDir + '/js/spinner.js',
@@ -29,7 +28,8 @@ let paths = {
 			baseDir + '/js/fileUpload.js',
 			baseDir + '/js/select2Init.js',
 			baseDir + '/js/sliders.js',
-			baseDir + '/js/app.js' // app.js. Always at the end
+			baseDir + '/js/menu.js',
+			baseDir + '/js/app.js', // app.js. Always at the end
 		],
 		dest: baseDir + '/js',
 	},
@@ -168,18 +168,18 @@ const rebuildJekyll = series(jekyllBuild, function (cb) {
 function startwatch() {
 	watch(baseDir  + '/**/' + preprocessor + '/**/*', styles);
 	watch(baseDir  + '/**/*.{' + imageswatch + '}', images);
-	watch(baseDir  + '/**/*.{' + fileswatch + '}').on('change', browserSync.reload);
+	// watch(baseDir  + '/**/*.{' + fileswatch + '}').on('change', browserSync.reload);
 	// watch(_assetsFiles, rebuildJekyll);
-	watch([baseDir + '/**/*.js', '!' + paths.scripts.dest + '/*.min.js'], scripts);
+	watch([baseDir + '/js/*.js', '!' + paths.scripts.dest + '/*.min.js'], scripts);
 }
 
-exports.browsersync = browsersync;
-exports.assets      = series(cleanimg, styles, scripts, jekyllBuild);
-exports.styles      = styles;
-exports.scripts     = scripts;
-exports.images      = images;
-exports.cleanimg    = cleanimg;
-exports.deploy      = deploy;
-exports.jekyllBuild = jekyllBuild;
+exports.browsersync   = browsersync;
+exports.assets        = series(cleanimg, styles, scripts, jekyllBuild);
+exports.styles        = styles;
+exports.scripts       = scripts;
+exports.images        = images;
+exports.cleanimg      = cleanimg;
+exports.deploy        = deploy;
+exports.jekyllBuild   = jekyllBuild;
 exports.rebuildJekyll = rebuildJekyll;
-exports.default     = parallel(styles, scripts, browsersync, startwatch);
+exports.default       = parallel(styles, scripts, browsersync, startwatch);

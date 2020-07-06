@@ -63,7 +63,6 @@
               $this.addClass("active");
             });
           });
-          console.log("init");
         },
 
         slideChangeTransitionStar: function () {
@@ -74,7 +73,6 @@
               $(".team-slider-pagination").find(".pagination-item").eq(sliderIndex).addClass("active");
             }
           });
-          console.log("slideChangeTransitionStart");
         },
       },
       autoplay: {

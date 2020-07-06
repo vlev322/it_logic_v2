@@ -1,16 +1,15 @@
-$(document).ready(function() {
-  if($('body').is('.home-page')) {
-
+$(document).ready(function () {
+  if ($("body").is(".home-page")) {
     $(document).on("scroll", onScroll);
 
     $('.nav_links a.lk[href^="#"]').click(function (e) {
       e.preventDefault();
       $(document).off("scroll");
 
-      $('a.lk').each(function () {
-        $(this).removeClass('current-link');
-      })
-      $(this).addClass('current-link');
+      $("a.lk").each(function () {
+        $(this).removeClass("current-link");
+      });
+      $(this).addClass("current-link");
 
       var target = this.hash;
       $target = $(target);
@@ -19,87 +18,95 @@ $(document).ready(function() {
 
       var offsetTarget = $target.offset().top - 40;
 
-      $('html, body').stop().animate({
-        'scrollTop': offsetTarget
-      }, 800, 'swing', function () {
-        window.location.hash = target;
-        $(document).on("scroll", onScroll);
-      });
+      $("html, body")
+        .stop()
+        .animate(
+          {
+            scrollTop: offsetTarget,
+          },
+          800,
+          "swing",
+          function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+          },
+        );
 
       closeNav();
     });
 
     /*  Let's talk  */
-    $('.lets-talk').click(function (e) {
+    $(".lets-talk").click(function (e) {
       e.preventDefault();
 
-      $('html, body').stop().animate({
-        'scrollTop': $('#go-lets-talk').offset().top
-      }, 800);
+      $("html, body")
+        .stop()
+        .animate(
+          {
+            scrollTop: $("#go-lets-talk").offset().top,
+          },
+          800,
+        );
 
-      $('#details').val('');
-
+      $("#details").val("");
     });
 
-    $('.to-about').click(function (e) {
-        e.preventDefault();
+    $(".to-about").click(function (e) {
+      e.preventDefault();
 
-        $('html, body').stop().animate({
-            'scrollTop': $('#about').offset().top
-        }, 800);
+      $("html, body")
+        .stop()
+        .animate(
+          {
+            scrollTop: $("#about").offset().top,
+          },
+          800,
+        );
     });
-
   } else {
-    $('.nav_links a.lk').each(function() {
-      $(this).attr('href', '/' + this.hash);
+    $(".nav_links a.lk").each(function () {
+      $(this).attr("href", "/" + this.hash);
     });
 
     /*  Let's talk  */
-    var buttonLets = $('.header_btns .lets-talk').attr('href');
-    $('.header_btns .lets-talk').attr('href', '/' + buttonLets);
+    var buttonLets = $(".header_btns .lets-talk").attr("href");
+    $(".header_btns .lets-talk").attr("href", "/" + buttonLets);
   }
 
   /* mobile menu */
 
-  $('.header_menu_m').click(function(e){
-
-    if($(this).hasClass('close-btn')) {
-
+  $(".header_menu_m").click(function (e) {
+    if ($(this).hasClass("close-btn")) {
       closeNav();
-
     } else {
-
-      $('.nav').addClass('open');
-      $(this).addClass('close-btn');
-      $('.m_bg_menu').addClass('close-btn');
-      $('body').addClass('no_scroll');
+      $(".nav").addClass("open");
+      $(this).addClass("close-btn");
+      $(".m_bg_menu").addClass("close-btn");
+      $("body").addClass("no_scroll");
     }
-
   });
-
 });
 
-function closeNav(){
-  $('.header_menu_m').removeClass('close-btn');
-  $('.m_bg_menu').removeClass('close-btn');
-  $('.nav').addClass('close');
-  $('body').removeClass('no_scroll');
+function closeNav() {
+  $(".header_menu_m").removeClass("close-btn");
+  $(".m_bg_menu").removeClass("close-btn");
+  $(".nav").addClass("close");
+  $("body").removeClass("no_scroll");
 
-    setTimeout(function(){
-    $('.nav').removeClass('close');
-    $('.nav').removeClass('open');
+  setTimeout(function () {
+    $(".nav").removeClass("close");
+    $(".nav").removeClass("open");
   }, 300);
 }
 
-function onScroll(event){
+function onScroll(event) {
   var scrollPosition = $(document).scrollTop();
 
-  $('.nav a').each(function () {
+  $(".nav a").each(function () {
     var currentLink = $(this);
-
-    if (currentLink.attr("href").charAt(0) === "#") {
-      var refElement = $(currentLink.attr("href"));
-
+    var substrLink = currentLink.attr("href").substr(1)
+    if (substrLink.charAt(0) === "#") {
+      var refElement = $(substrLink);
       var offsetElement = refElement.position().top - 60;
 
       if (offsetElement <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
@@ -113,9 +120,8 @@ function onScroll(event){
         $('a').each(function () {
           $(this).removeClass('current-link');
         })
-        //$('.nav a').last().addClass("current-link");
+        $('.nav a').last().addClass("current-link");
       }
     }
   });
-
 }

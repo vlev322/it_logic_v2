@@ -1,19 +1,11 @@
-menu:
-  - url: /
-    name: main
-
 exclude:
   - package.json
   - gulpfile.js
   - node_modules
 
-collections:
-  services:
-    layout: services
-    output: true
-
-permalink: /:name/
-
+# permalink: /:name/
+permalink: pretty
+# START sectipn for pageGenerator | For more info folow -> https://github.com/avillafiorita/jekyll-datapage_gen
 page_gen-dirs: true # uncomment, if you prefer to generate named folders
 
 # Services parts
@@ -84,3 +76,5 @@ page_gen:
   # read is a boolean value in the YML file, but I need to test for
   # falsity (read: false). The field `filter` is no good and I need to
   # use filter_conditions
+
+  # END sectipn for pageGenerator
