@@ -1,5 +1,7 @@
 $(document).ready(function() {
-  $('#contact_form').submit(function(){
+  const $contactForm = $('#contact_form')
+
+  $contactForm.submit(function(){
     $('.contact_spinner').fadeIn(100);
   });
 

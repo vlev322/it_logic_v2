@@ -17,6 +17,7 @@ let paths = {
 			'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
 			'node_modules/jquery-ujs/src/rails.js',
 			baseDir + '/js/swiper-lib.js',
+			baseDir + '/js/select2.lib.js',
 			baseDir + '/js/serviceShowContent.js',
 			baseDir + '/js/contact_us.js',
 			baseDir + '/js/hover.zoom.js',
@@ -25,6 +26,8 @@ let paths = {
 			baseDir + '/js/portfolio.js',
 			baseDir + '/js/spinner.js',
 			baseDir + '/js/typer.js',
+			baseDir + '/js/fileUpload.js',
+			baseDir + '/js/select2Init.js',
 			baseDir + '/js/sliders.js',
 			baseDir + '/js/app.js' // app.js. Always at the end
 		],

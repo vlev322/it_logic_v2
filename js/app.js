@@ -1,5 +1,34 @@
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// compiled file.
+//
+// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
+// about supported directives.
+//
+//= require jquery
+//= require jquery_ujs
+//= require jquery.remotipart
+//= require ./modernizr.custom
+//= require ./hover.zoom
+//= require swiper
+//= require froogaloop
+//= require ./menu
+//= require ./contact_us
+//= require ./portfolio
+//= require ./serviceShowContent
+//= require ./sliders
+//= require ./spinner
+//= require ./typer
+//= require ./select2Init
+//= require ./fileUpload
 
 $(document).ready(function() {
+
   if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
     $('.index_top').height($(window).height() - 57);
   }
@@ -33,6 +62,7 @@ $(document).ready(function() {
       var headScroll = (-wScroll / 2);
       var faderScroll = (wScroll / 400);
       var fadeToColor = Math.min(faderScroll, .9);
+
       shadower.css({
         opacity: fadeToColor
       });
@@ -176,6 +206,5 @@ function closeToLupa() {
                 node.removeClass('visible');
             }, 1000)
         }
-		};
-
+    };
 })(jQuery);

@@ -1,0 +1,111 @@
+---
+layout: default
+---
+
+
+<section class="index_form">
+  <div id="flash_contact_form" class="flash_wrap"></div>
+  <div class="container_small">
+    <div class="text_center">
+      <h2>{{ include.title }}</h2>
+
+      <div class="form_wrap">
+        <div class="toggle_contact_form">
+          <div class="index_form__time">24/7</div>
+          <%= form_tag(contact_us_path, class: 'idea_form', id: 'contact_form', remote: true, multipart: true) do %>
+            <div class="index_form_left">
+              <div class="input_field">
+                <%= text_field_tag 'name', nil, placeholder: 'Name*', required: true %>
+              </div>
+              <div class="input_field">
+                <%= email_field_tag 'email', nil, pattern:"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", placeholder: 'Email*', required: true %>
+              </div>
+              <div class="input_field">
+                <%= text_field_tag 'phone', nil, pattern: "^(?=.*[0-9])[- +()0-9]+$", placeholder: 'Phone*', required: true %>
+              </div>
+
+              <div class="input_field select-control">
+                <%=
+                  select_tag 'region',
+                             options_for_select(
+                                 ['Africa', 'Asia', 'Europe', 'North America', 'South America', 'Oceania'],
+                                  {:prompt => 'Select'}
+                             ),
+                             required: true, id: 'select-like-input',
+                             :include_blank => 'Select your region*',
+                             :class => 'countrySelect',
+                :style => 'width: 100%'
+
+                %>
+              </div>
+
+              <div class="input_field">
+                <div class="file-control fileUpload">
+                  <label for="file" class="file-control__label">
+                    Click here to upload file
+                  </label>
+
+                  <%= file_field_tag 'file',
+                    accept: 'application/pdf,application/x-pdf,application/x-bzpdf,application/x-gzpdfimage/png,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/rtf,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation',
+                    class: 'fileInput file-control__input'
+                  %>
+
+                  <div class="file-name-row">
+                    <div class="fileUploadError error-note error-note--center"></div>
+                    <div class="fileName file-control__name"></div>
+
+                    <a href="#" class="fileClear file-control__clear">
+                      <svg width="103" height="103" viewBox="0 0 103 103" xmlns="http://www.w3.org/2000/svg"><path d="M51.702 45.338L94.836 2.205l.019.019a4.5 4.5 0 1 1 6.325 6.325l.02.02-43.134 43.133L101.2 94.836l-.02.019a4.5 4.5 0 1 1-6.325 6.325l-.02.02-43.133-43.134L8.57 101.2l-.02-.02a4.5 4.5 0 1 1-6.325-6.325l-.02-.02 43.134-43.133L2.205 8.57l.019-.02a4.5 4.5 0 1 1 6.325-6.325l.02-.02 43.133 43.134z" fill="#d72e2e" fill-rule="evenodd"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input_field">
+                <div class="checkbox-control">
+                  <%= check_box_tag 'nda' %>
+
+                  <label for="nda">I would like to receive an NDA</label>
+                </div>
+              </div>
+
+              <div class="input_field">
+                <div
+                  class="g-recaptcha"
+                  data-sitekey="6Les8KYZAAAAAHSAzDaBZpFbe0o5us-_2LBklTBZ"
+                ></div>
+                <div class="captchaNote error-note"></div>
+              </div>
+            </div>
+
+            <div class="index_form_right">
+              <div class="input_field">
+                <%= text_area_tag 'details', nil, placeholder: 'Project details...*', required: true %>
+              </div>
+            </div>
+
+            <div class="form_btn_wrapp">
+              <%# button_to button, contact_us_path, method: :post, class: "btn fullblue btn-default", disable_with: "Submitting..." %>
+              <button type="submit" class="btn fullblue btn-default">SUBMIT</button>
+            </div>
+
+            <a href="https://www.upwork.com/agencies/~019ebb4d79b498eccf" target="_blank" class="index_form__upwork">
+              <span><img src="<%= image_path('upwork-logo.png') %>" alt=""></span>
+              <span> Find us on Upwork</span>
+            </a>
+          <% end %>
+        </div>
+
+        <div class="contact_spinner">
+          <div class="loader">Loading...</div>
+        </div>
+
+        <div class="contact_success bg_blue">
+          <h3>Your message has been sent.</h3>
+          <p>We will contact you within 2 hours 8AM-9PM CET Mon-Fri.</p>
+          <%= button_tag 'GOT IT', class: "contact_res_btn btn fullblue btn-default", id: "contact_res_btn", onclick: 'contactUs.toggleContactForm()' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
