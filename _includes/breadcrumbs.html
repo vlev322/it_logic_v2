@@ -10,6 +10,6 @@
       <li>{{page.head_title}}</li>
       {% continue %}
     {% endif %}
-    <li><a href={{ path }}>{{item}}</a></li>
+    <li><a href={{ path }}>{{item | capitalize }}</a></li>
   {% endfor %}
 </ol>
