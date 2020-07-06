@@ -62,17 +62,17 @@ page_gen:
     name: "title"
     dir: "technologies"
 
-  # - index_files: false
-  #   data: technologies-pages.back_end
-  #   template: "service"
-  #   name: "title"
-  #   dir: "technologies"
+  - index_files: false
+    data: technologies-pages.back_end
+    template: "service"
+    name: "title"
+    dir: "technologies"
 
-  # - index_files: false
-  #   data: technologies-pages.front_end
-  #   template: "service"
-  #   name: "title"
-  #   dir: "technologies"
+  - index_files: false
+    data: technologies-pages.front_end
+    template: "service"
+    name: "title"
+    dir: "technologies"
 
   # Example to use filter for create page
   # - data: "books"
