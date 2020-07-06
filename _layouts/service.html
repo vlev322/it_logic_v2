@@ -6,15 +6,23 @@ layout: default
   {% assign technology = url | last %}
 
   {% capture src %}
-    /images/dest/technologies/{{ technology }}.png
+  /images/dest/technologies/{{ technology }}.png
+  {% endcapture %}
+
+  {% capture alt %}
+    {{ technology }}
+  {% endcapture %}
+
+  <!-- Create path if image inner extensions (specifically *.jpg) -->
+  {% capture onErrorSrc %}
+      this.src="/images/dest/technologies/{{ technology }}.jpg"
   {% endcapture %}
 
 <div class="inner_page_top inn_bg">
   <div class="container_big">
     <h1 class="headline_with_bg">
-
       {% if url[1] == 'technologies' %}
-        <img src={{ src }} alt="">
+        <img src={{ src }} alt={{alt}} onError={{onErrorSrc}} />
       {% else %}
         {{page.head_title}}
       {% endif %}
