@@ -1,0 +1,15 @@
+{% assign url = page.url | remove_first: '/' | split: '/'  %}
+
+<ol class="breadcrumb">
+  <li><a href="/">Home</a></li>
+  {% for item in url %}
+    {% capture path %}
+      /{{ item }}
+    {% endcapture %}
+    {% if forloop.last %}
+      <li>{{page.head_title}}</li>
+      {% continue %}
+    {% endif %}
+    <li><a href={{ path }}>{{item}}</a></li>
+  {% endfor %}
+</ol>

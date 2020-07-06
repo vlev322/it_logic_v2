@@ -32,6 +32,7 @@ layout: default
 
 <div class="container content">
   <!-- <%= render partial: 'partials/breadcrumb', locals: {breadcrumb: @post.the_breadcrumb} %> -->
+  {% include breadcrumbs.html %}
   <h2>
     <strong>
       {{page.content_title}}
