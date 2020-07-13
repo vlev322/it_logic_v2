@@ -20,6 +20,27 @@
   <link rel="stylesheet" href=/css/app.min.css>
   <!-- <link rel="stylesheet" href=http://localhost:4000/css/app.min.css> -->
 
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+        i[r] ||
+        function () {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+    ga("create", "UA-99791537-1", "auto");
+    ga("send", "pageview");
+  </script>
+  <!-- <div class="loader_bg">
+    <div class="loader"></div>
+  </div> -->
 </head>
 
 
@@ -1588,12 +1609,10 @@
    <!-- Form -->
    <script>
   function recaptchaCallback() {
-    var button = document.querySelectorAll('.toggle_contact_form button[type="submit"]');
-
+    const button = document.querySelectorAll('.toggle_contact_form button[type="submit"]');
     if (!button.length) {
       return;
     }
-
     button[0].disabled = false;
   }
 </script>
@@ -1612,12 +1631,9 @@
             class="idea_form"
             id="contact_form"
             enctype="multipart/form-data"
-            action="/contact_us"
             accept-charset="UTF-8"
             data-remote="true"
-            method="post"
           >
-            <input name="utf8" type="hidden" value="✓" />
             <div class="index_form_left" data-select2-id="select2-data-4-zn8k">
               <div class="input_field">
                 <input type="text" name="name" id="name" placeholder="Name*" required="required" />
@@ -1668,7 +1684,6 @@
                   <label for="file" class="file-control__label">
                     Click here to upload file
                   </label>
-
                   <input
                     type="file"
                     name="file"
@@ -1676,7 +1691,6 @@
                     accept="application/pdf,application/x-pdf,application/x-bzpdf,application/x-gzpdfimage/png,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/rtf,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation"
                     class="fileInput file-control__input"
                   />
-
                   <div class="file-name-row">
                     <div class="fileUploadError error-note error-note--center"></div>
                     <div class="fileName file-control__name"></div>
@@ -1693,51 +1707,18 @@
                   </div>
                 </div>
               </div>
-
               <div class="input_field">
                 <div class="checkbox-control">
                   <input type="checkbox" name="nda" id="nda" value="1" />
-
                   <label for="nda">I would like to receive an NDA</label>
                 </div>
               </div>
 
               <div class="input_field">
-                <div class="g-recaptcha" data-sitekey="6Les8KYZAAAAAHSAzDaBZpFbe0o5us-_2LBklTBZ">
-                  <div style="width: 304px; height: 78px;">
-                    <div>
-                      <iframe
-                        src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Les8KYZAAAAAHSAzDaBZpFbe0o5us-_2LBklTBZ&amp;co=aHR0cHM6Ly9sb2dpYy5kZXZsaXRzLmNvbTo0NDM.&amp;hl=uk&amp;v=NMoy4HgGiLr5NAQaEQa2ho8X&amp;size=normal&amp;cb=t29vgv94q4gd"
-                        width="304"
-                        height="78"
-                        role="presentation"
-                        name="a-j1bnawk08pf5"
-                        frameborder="0"
-                        scrolling="no"
-                        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
-                      ></iframe>
-                    </div>
-                    <textarea
-                      id="g-recaptcha-response"
-                      name="g-recaptcha-response"
-                      class="g-recaptcha-response"
-                      style="
-                        width: 250px;
-                        height: 40px;
-                        border: 1px solid rgb(193, 193, 193);
-                        margin: 10px 25px;
-                        padding: 0px;
-                        resize: none;
-                        display: none;
-                      "
-                    ></textarea>
-                  </div>
-                  <iframe style="display: none;"></iframe>
-                </div>
+                <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6Lc_GK8ZAAAAAJxAm71JiPHtoZ7DTX-mEwzNpRtp"></div>
                 <div class="captchaNote error-note"></div>
               </div>
             </div>
-
             <div class="index_form_right">
               <div class="input_field">
                 <textarea
@@ -1750,7 +1731,7 @@
             </div>
 
             <div class="form_btn_wrapp">
-              <button type="submit" class="btn fullblue btn-default">SUBMIT</button>
+              <button type="submit" disabled class="btn fullblue btn-default">SUBMIT</button>
             </div>
 
             <a
@@ -1758,11 +1739,7 @@
               target="_blank"
               class="index_form__upwork"
             >
-              <span
-                ><img
-                  src="../images/dest/logos/upwork-logo.png"
-                  alt=""
-              /></span>
+              <span><img src="../images/dest/logos/upwork-logo.png" alt="" /></span>
               <span> Find us on Upwork</span>
             </a>
           </form>
@@ -1771,7 +1748,6 @@
         <div class="contact_spinner">
           <div class="loader">Loading...</div>
         </div>
-
         <div class="contact_success bg_blue">
           <h3>Your message has been sent.</h3>
           <p>We will contact you within 2 hours 8AM-9PM CET Mon-Fri.</p>
@@ -1780,7 +1756,6 @@
             type="submit"
             class="contact_res_btn btn fullblue btn-default"
             id="contact_res_btn"
-            onclick="contactUs.toggleContactForm()"
           >
             GOT IT
           </button>

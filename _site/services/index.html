@@ -20,6 +20,27 @@
   <link rel="stylesheet" href=/css/app.min.css>
   <!-- <link rel="stylesheet" href=http://localhost:4000/css/app.min.css> -->
 
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+        i[r] ||
+        function () {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+    ga("create", "UA-99791537-1", "auto");
+    ga("send", "pageview");
+  </script>
+  <!-- <div class="loader_bg">
+    <div class="loader"></div>
+  </div> -->
 </head>
 
 
@@ -74,7 +95,7 @@
     <div class="container_big">
       <div class="call_with_icon">
         <img src="/images/dest/icons/briefcase_icon.png" alt="">
-        <a href="/#" class="btn blue uppercase">cases</a>
+        <a href="/#portfolio" class="btn blue uppercase">cases</a>
       </div>
       <div class="call_with_icon">
         <img src="/images/dest/icons/communication_icon.png" alt="">

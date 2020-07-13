@@ -23,9 +23,9 @@ let paths = {
 			baseDir + '/js/hover.zoom.js',
 			baseDir + '/js/modernizr.custom.js',
 			baseDir + '/js/portfolio.js',
-			baseDir + '/js/spinner.js',
 			baseDir + '/js/typer.js',
 			baseDir + '/js/fileUpload.js',
+			baseDir + '/js/spinner.js',
 			baseDir + '/js/select2Init.js',
 			baseDir + '/js/sliders.js',
 			baseDir + '/js/menu.js',
@@ -75,6 +75,7 @@ const del          = require('del');
 const exec         = require("child_process").exec;
 const spawn        = require("child_process").spawn;
 const gutil        = require('gulp-util');
+const browserify   = require('gulp-browserify');
 
 function browsersync() {
 	browserSync.init({
@@ -140,7 +141,8 @@ function jekyllBuild(done) {
   const jekyll = spawn('jekyll', ['serve',
     '--watch',
     '--incremental',
-    '--drafts'
+		'--drafts',
+		'--trace'
   ]);
 
   const jekyllLogger = (buffer) => {
