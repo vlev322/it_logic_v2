@@ -938,6 +938,7 @@
 
         .rating img {
           max-width: 15px;
+          vertical-align: initial;
         }
 
         @media screen and (min-width: $mobile_view_breakpoint) {
