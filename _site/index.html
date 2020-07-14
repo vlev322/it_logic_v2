@@ -1609,11 +1609,13 @@
    <!-- Form -->
    <script>
   function recaptchaCallback() {
+    const captchaNote = document.getElementsByClassName("captchaNote")[0];
     const button = document.querySelectorAll('.toggle_contact_form button[type="submit"]');
     if (!button.length) {
       return;
     }
     button[0].disabled = false;
+    captchaNote.innerHTML = "";
   }
 </script>
 
