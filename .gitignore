@@ -6,3 +6,7 @@
 node_modules
 ./node_modules
 /.jekyll-cache/
+/_site/
+_site/
+server/node_modules/
+server/node_modules
