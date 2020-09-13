@@ -30,7 +30,7 @@
 	"dependencies": {
 		"@types/jquery": "^3.5.0",
 		"gulp-browserify": "^0.5.1",
-		"node-fetch": "^2.6.0",
+		"node-fetch": "^2.6.1",
 		"nodemailer": "^6.4.10",
 		"querystring": "^0.2.0",
 		"swiper": "^5.4.5"
